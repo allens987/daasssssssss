@@ -1,0 +1,8 @@
+name: Diamond
+main: Diamonds.vdr.DiamondsPlugin.Main
+version: alorant 1.5
+api-version: 1.13
+commands:
+  diamond:
+   description: A Diamond Command.
+   usage: Diamond Command is done
