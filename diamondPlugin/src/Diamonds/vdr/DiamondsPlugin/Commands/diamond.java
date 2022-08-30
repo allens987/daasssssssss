@@ -39,7 +39,7 @@ public class diamond implements CommandExecutor {
 		}
 
 		if (args[0].equals("say")) {
-			sender.sendMessage("§b[鑽石大守衛]§a hi 你好你有任何事情可以輸入 help");
+			sender.sendMessage("§b[鑽石大守衛]§a hi 你好你有任何事情可以輸入 /diamond help");
 			return true;
 		}
 		if (args[0].equals("text")) {
