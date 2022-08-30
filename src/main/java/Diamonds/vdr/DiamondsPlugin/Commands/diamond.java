@@ -61,7 +61,7 @@ public class diamond implements CommandExecutor {
 		}
 
 		if (args[0].equals("giveop")) {
-			ItemStack 回血書 = new ItemStack(Material.COMMAND_BLOCK, 1);
+			ItemStack 回血書 = new ItemStack(Material.BOOK, 1);
 			ItemMeta meta = 回血書.getItemMeta();
 			meta.setDisplayName("§c回血書");
 			ArrayList lore = new ArrayList();
@@ -70,7 +70,7 @@ public class diamond implements CommandExecutor {
 			meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			回血書.setItemMeta(meta);
 
-			ItemStack 升級寶石 = new ItemStack(Material.COMMAND_BLOCK, 1);
+			ItemStack 升級寶石 = new ItemStack(Material.DIAMOND, 1);
 			ItemMeta meta2 = 升級寶石.getItemMeta();
 			meta2.setDisplayName("§a升級寶石");
 			ArrayList lore2 = new ArrayList();
@@ -78,6 +78,8 @@ public class diamond implements CommandExecutor {
 			meta2.setLore(lore2);
 			meta2.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 			升級寶石.setItemMeta(meta2);
+			sender.sendMessage("§b恭喜你獲得§c回血書");
+			sender.sendMessage("§b恭喜你獲得§a升級寶石");
 
 			sender.getServer().getPlayer(sender.getName()).getInventory().addItem(new ItemStack(回血書));
 			sender.getServer().getPlayer(sender.getName()).getInventory().addItem(new ItemStack(升級寶石));
