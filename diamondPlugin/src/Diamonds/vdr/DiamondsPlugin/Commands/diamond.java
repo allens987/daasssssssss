@@ -139,6 +139,5 @@ public class diamond implements CommandExecutor {
 	public static boolean equalsIgnoreCase(String string) {
 		// TODO Auto-generated method stub
 		return false;
-
 	}
 }
