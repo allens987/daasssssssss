@@ -1,1 +1,0 @@
-package Diamonds.vdr.DiamondsPlugin;
