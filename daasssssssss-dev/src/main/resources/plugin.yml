@@ -1,7 +1,0 @@
-name: Diamond
-main: Diamonds.vdr.DiamondsPlugin.Main
-version: alo-rant 1.5
-commands:
-  diamond:
-   description: A Diamond Command.
-   usage: Diamond Command is done
