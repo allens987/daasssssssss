@@ -5,7 +5,6 @@ settings:
   build-limit: 100
   build-low-limit: 40
   connection-throttle: 4000
-  
 commands:
   diamond:
     description: A Diamond Command.
