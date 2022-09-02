@@ -5,3 +5,6 @@ commands:
   diamond:
    description: A Diamond Command.
    usage: Diamond Command is done
+   settings:
+     build-limit: 100
+     build-low-limit: 40
