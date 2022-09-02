@@ -40,7 +40,7 @@ public class diamond implements CommandExecutor {
 		if (args[0].equals("give")) {
 			if (sender instanceof Player) {
 				if (!sender.isOp()) {
-					
+
 					sender.sendMessage("§b[鑽石大守衛]§a 此指令只有玩家才能執行");
 					sender.sendMessage("§b[鑽石大守衛] §a你沒有權限執行這個指令");
 				} else {
@@ -50,24 +50,7 @@ public class diamond implements CommandExecutor {
 				}
 			}
 		}
-		if (args[0].equals("sc")) {
-			ScoreboardManager manager = Bukkit.getScoreboardManager();
-           // 建立新Scoreboard
-			Scoreboard scoreboard = manager.getNewScoreboard();
-          // 注册新的记分项
-			Objective objective = scoreboard.registerNewObjective("内部名字", "dummy", "§a我是展示名~~");
-       // 设置记分项展示位置
-			Objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-        // 给记分项增加 内容与对应的分数
-			Score score = objective.getScore("内容");
-			score.setScore(12345);
-          // 设置计分板
-			Player player = 我也不知道这个player要从哪引用;
-			player.setScoreboard(scoreboard);
-			return true;
-
-		}
-		if (args[0].equals("help")) {
+			if (args[0].equals("help")) {
 			sender.sendMessage("§b[鑽石大守衛] §d==========教學==========");
 			sender.sendMessage("§b/diamond help    §d  |    教學清單 ✔ ");
 			sender.sendMessage("§b/diamond say    §d   |    每個人都可以輸入 ✔");
