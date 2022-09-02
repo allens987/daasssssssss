@@ -1,9 +1,7 @@
+
 package Diamonds.vdr.DiamondsPlugin.Commands;
-
 import java.util.ArrayList;
-
 import org.bukkit.Bukkit;
-
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -33,4 +31,3 @@ public class sc implements CommandExecutor {
             }
         }
     }
-}
