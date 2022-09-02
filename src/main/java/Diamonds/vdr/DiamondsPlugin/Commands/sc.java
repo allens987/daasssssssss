@@ -1,5 +1,4 @@
-package Diamonds.vdr.DiamondsPlugin.Commands.sc;
-
+package Diamonds.vdr.DiamondsPlugin.Commands;
 import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;;
