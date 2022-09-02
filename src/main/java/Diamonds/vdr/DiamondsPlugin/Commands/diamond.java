@@ -50,14 +50,14 @@ public class diamond implements CommandExecutor {
 				}
 			}
 		}
-		if (args[0]).equals("sc")) {
+		if (args[0].equals("sc")) {
 			ScoreboardManager manager = Bukkit.getScoreboardManager();
            // 建立新Scoreboard
 			Scoreboard scoreboard = manager.getNewScoreboard();
           // 注册新的记分项
 			Objective objective = scoreboard.registerNewObjective("内部名字", "dummy", "§a我是展示名~~");
        // 设置记分项展示位置
-			objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+			Objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         // 给记分项增加 内容与对应的分数
 			Score score = objective.getScore("内容");
 			score.setScore(12345);
