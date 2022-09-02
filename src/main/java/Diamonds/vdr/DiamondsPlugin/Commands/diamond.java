@@ -16,6 +16,22 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class diamond implements CommandExecutor {
+    public class PlayerJoinListener implements Listener {
+        @EventHandler
+        public void onPlayerJoin(PlayerJoinEvent evt) {
+            Player joined = evt.getPlayer();
+            String joinedName = joined.getName();
+
+            //RETRIEVING THE JOIN MESSAGE ALREADY SET
+            String joinMessage = evt.getJoinMessage();
+
+            //SETTING THE JOIN MESSAGE
+            evt.setJoinMessage(joinedName + " &e加入了伺服器");
+
+            //CLEARING THE JOIN MESSAGE
+            evt.setJoinMessage(null);
+        }
+    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
