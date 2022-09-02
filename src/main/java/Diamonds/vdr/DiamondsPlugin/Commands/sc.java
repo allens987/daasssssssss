@@ -2,10 +2,7 @@ package Diamonds.vdr.DiamondsPlugin.Commands.sc;
 
 import java.util.ArrayList;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
+import org.bukkit.Material;;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -13,7 +10,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class sc implements CommandExecutor {
     public class sc implements Listener {
         @EventHandler
         public void onPlayerJoin(PlayerJoinEvent evt) {
@@ -30,4 +26,3 @@ public class sc implements CommandExecutor {
             evt.setJoinMessage(null);
             }
         }
-    }
