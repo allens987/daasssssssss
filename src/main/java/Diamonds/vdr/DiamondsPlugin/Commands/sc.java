@@ -14,7 +14,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class sc implements CommandExecutor {
-    public class PlayerJoinListener implements Listener {
+    public class sc implements Listener {
         @EventHandler
         public void onPlayerJoin(PlayerJoinEvent evt) {
             Player joined = evt.getPlayer();
