@@ -37,6 +37,11 @@ public class diamond implements CommandExecutor {
 			return true;
 
 		}
+		if (args[0].equals("server")) {
+			sender.serverMessage("§b[鑽石大守衛] §a你是在哭喔你text幹嘛啦");
+			return true;
+
+		}
 		if (args[0].equals("give")) {
 			if (sender instanceof Player) {
 				if (!sender.isOp()) {
