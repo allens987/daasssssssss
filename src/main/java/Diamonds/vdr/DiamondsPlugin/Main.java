@@ -14,10 +14,10 @@ public static Main Diamond;
 
        Diamond = this;
 
-       getLogger().info("����Ұʧ���...");
+       getLogger().info("server is open...");
        Bukkit.getPluginCommand("diamond").setExecutor(new diamond());
     }
     public void onDisable() {
-        getLogger().info("������������...");    
+        getLogger().info("server is cord...");    
     }
 }
