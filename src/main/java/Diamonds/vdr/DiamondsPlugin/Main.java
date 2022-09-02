@@ -15,7 +15,6 @@ public class Main extends JavaPlugin {
         Diamond = this;
 
         getLogger().info("[diamond] server is open...");
-        Bukkit.getPluginCommand("teams").setExecutor(new teams());
 
         Bukkit.getPluginCommand("diamond").setExecutor(new diamond());
     }
