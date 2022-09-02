@@ -9,7 +9,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-    public class sc implements Listener {
+    public class sc implements CommandExecutor {
         @EventHandler
         public void onPlayerJoin(PlayerJoinEvent evt) {
             Player joined = evt.getPlayer();
