@@ -44,7 +44,7 @@ public class diamond implements CommandExecutor {
                 sender.sendMessage("§b[鑽石大守衛] §a用法：/diamond server <訊息>");
             } else {
                 String Message = args[1];
-                Bukkit.getServer().broadcastMessage(Message);
+                Bukkit.getServer().broadcastMessage("§b[鑽石大公告] : "+Message);
             }
         }
         if (args[0].equals("give")) {
