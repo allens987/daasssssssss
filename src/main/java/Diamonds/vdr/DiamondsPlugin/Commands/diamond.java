@@ -38,9 +38,14 @@ public class diamond implements CommandExecutor {
 
         }
         if (args[0].equals("server")) {
-            Bukkit.getServer().broadcastMessage("§b[鑽石大守衛] §ahi");
-            return true;
-
+            if (!sender.isOp()) {
+                sender.sendMessage("§b[鑽石大守衛] §a你沒有權限執行這個指令");
+            } else if (args.length != 2) {
+                sender.sendMessage("§b[鑽石大守衛] §a用法：/diamond server <訊息>");
+            } else {
+                String Message = args[1];
+                Bukkit.getServer().broadcastMessage(Message);
+            }
         }
         if (args[0].equals("give")) {
             if (sender instanceof Player) {
