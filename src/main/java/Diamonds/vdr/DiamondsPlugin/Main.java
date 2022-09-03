@@ -1,6 +1,5 @@
 package Diamonds.vdr.DiamondsPlugin;
 
-import Diamonds.vdr.DiamondsPlugin.Commands.sc;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,7 +16,6 @@ public class Main extends JavaPlugin {
         Diamond = this;
 
         getLogger().info("[diamond] server is open...");
-        Bukkit.getPluginCommand("diamond").setExecutor((CommandExecutor) new sc());
         Bukkit.getPluginCommand("diamond").setExecutor(new diamond());
     }
 
