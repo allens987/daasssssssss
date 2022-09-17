@@ -20,7 +20,7 @@ public class diamond implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("§b[鑽石大守衛] §d==========教學==========");
+            sender.sendMessage("§b[伺服器大守衛] §d==========教學==========");
             sender.sendMessage("§b/diamond help     §d |    教學清單 ✔ ");
             sender.sendMessage("§b/diamond say       §d|    每個人都可以輸入 ✔");
             sender.sendMessage("§b/diamond text      §d|    每個人都可以輸入 ✔");
@@ -29,11 +29,11 @@ public class diamond implements CommandExecutor {
         }
 
         if (args[0].equals("say")) {
-            sender.sendMessage("§b[鑽石大守衛]§a hi 你好你有任何事情可以輸入 help");
+            sender.sendMessage("§b[伺服器大守衛]§a hi 你好你有任何事情可以輸入 help");
             return true;
         }
         if (args[0].equals("text")) {
-            sender.sendMessage("§b[鑽石大守衛] §a你是在哭喔你text幹嘛啦");
+            sender.sendMessage("§b[伺服器大守衛] §a你是在哭喔你text幹嘛啦");
             return true;
 
         }
@@ -43,16 +43,18 @@ public class diamond implements CommandExecutor {
             } else if (args.length != 2) {
                 sender.sendMessage("§b[鑽石大守衛] §a用法：/diamond server <訊息>");
             } else {
-                String Message = args[1];
-                Bukkit.getServer().broadcastMessage("§b[鑽石大公告] §e  "+Message);
+                String Message;
+                for (int i = 2; i <= args.length; i++) {
+                    Message = Message + args[i-1];
+                Bukkit.getServer().broadcastMessage("§b[鑽石大公告] §e  " + Message);
             }
         }
         if (args[0].equals("give")) {
             if (sender instanceof Player) {
                 if (!sender.isOp()) {
 
-                    sender.sendMessage("§b[鑽石大守衛]§a 此指令只有玩家才能執行");
-                    sender.sendMessage("§b[鑽石大守衛] §a你沒有權限執行這個指令");
+                    sender.sendMessage("§b[伺服器大守衛]§a 此指令只有玩家才能執行");
+                    sender.sendMessage("§b[伺服器大守衛] §a你沒有權限執行這個指令");
                 } else {
                     sender.getServer().getPlayer(sender.getName()).getInventory().addItem(new ItemStack(Material.DIAMOND, 64));
                     return true;
@@ -60,7 +62,7 @@ public class diamond implements CommandExecutor {
             }
         }
         if (args[0].equals("help")) {
-            sender.sendMessage("§b[鑽石大守衛] §d==========教學==========");
+            sender.sendMessage("§b[伺服器大守衛] §d==========教學==========");
             sender.sendMessage("§b/diamond help    §d  |    教學清單 ✔ ");
             sender.sendMessage("§b/diamond say    §d   |    每個人都可以輸入 ✔");
             sender.sendMessage("§b/diamond text     §d |    每個人都可以輸入 ✔");
