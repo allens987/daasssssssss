@@ -43,9 +43,9 @@ public class diamond implements CommandExecutor {
             } else if (args.length != 2) {
                 sender.sendMessage("§b[鑽石大守衛] §a用法：/diamond server <訊息>");
             } else {
-                String Message;
+                String Message = null;
                 for (int i = 2; i <= args.length; i++) {
-                    Message = args[i-1];
+                    Message = Message + args[i-1];
                     Bukkit.getServer().broadcastMessage("§b[鑽石大公告] §e  " + Message);
                 }
             }
@@ -95,59 +95,6 @@ public class diamond implements CommandExecutor {
                 sender.getServer().getPlayer(sender.getName()).getInventory().addItem(new ItemStack(升級寶石));
             }
 
-            return false;
-        }
-
-        public void runTask() {
-            new BukkitRunnable() {
-                @Override
-                public void run() {
-                    // 遍历当前服务器所有在线的玩家
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        // 判断玩家手上的物品是否为咱们自定义的Item
-                        ItemStack 回血書 = new ItemStack(Material.COMMAND_BLOCK, 1);
-                        ItemMeta meta = 回血書.getItemMeta();
-                        meta.setDisplayName("§c回血書");
-                        ArrayList lore = new ArrayList();
-                        lore.add("§b手持回血, 每秒回血1滴血");
-                        meta.setLore(lore);
-                        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                        回血書.setItemMeta(meta);
-                        if (player.getItemInHand().isSimilar(回血書)) {
-                            // 这里是要判断玩家的血量有没有超过最大血量，如果不加这个判断会报错，原因是血量持续增加但是最高血量就是20
-                            if (player.getMaxHealth() - player.getHealth() > 1) {
-                                // 设置玩家的血量为当前血量+1
-                                player.setHealth(player.getHealth() + 1);
-                            } else {
-                                player.sendMessage(ChatColor.YELLOW + player.getName() + " >> " + ChatColor.RED + "Your health has max!");
-                            }
-                        }
-                    }
-                    // 这里是设置延迟，有个java基础的应该都懂
-                }
-            }.runTaskTimer((Plugin) this, 10, 10);
-            new BukkitRunnable() {
-                @SuppressWarnings("deprecation")
-                @Override
-                public void run() {
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        ItemStack 升級寶石 = new ItemStack(Material.COMMAND_BLOCK, 1);
-                        ItemMeta meta2 = 升級寶石.getItemMeta();
-                        meta2.setDisplayName("§a升級寶石");
-                        ArrayList lore2 = new ArrayList();
-                        lore2.add("§b手持該物品持續加經驗, 每0.5秒加1經驗");
-                        meta2.setLore(lore2);
-                        meta2.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                        升級寶石.setItemMeta(meta2);
-                        if (player.getItemInHand().isSimilar(升級寶石)) {
-                            player.giveExp((int) (player.getExp() + 1));
-                        }
-                    }
-                }
-            }.runTaskTimer((Plugin) this, 10, 10);
-        }
-
-        public static boolean equalsIgnoreCase(String string) {
             return false;
 
         }
