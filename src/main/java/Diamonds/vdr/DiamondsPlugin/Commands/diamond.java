@@ -33,6 +33,8 @@ public class diamond implements CommandExecutor {
                     sender.sendMessage("§b/diamond help     §d |    教學清單 ✔ ");
                     sender.sendMessage("§b/diamond say       §d|    每個人都可以輸入 ✔");
                     sender.sendMessage("§b/diamond text      §d|    每個人都可以輸入 ✔");
+                    sender.sendMessage("§b/diamond give      §d|    給予鑽石 要有op ✔");
+                    
 
                     return true;
                 }
