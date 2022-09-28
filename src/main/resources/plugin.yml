@@ -1,4 +1,4 @@
-name: Diamond
+name: Wuize_plugin-log-command
 main: Diamonds.vdr.DiamondsPlugin.Main
 version: alo-rant 1.5
 settings:
