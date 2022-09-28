@@ -25,15 +25,15 @@ public class diamond implements CommandExecutor {
                 if (!sender.isOp()) {
 
                     sender.sendMessage("§b[鑽石] §d==========教學==========");
-                    sender.sendMessage("§b/dwhelp     §d |    教學清單 ✔ ");
-                    sender.sendMessage("§b/dwsay       §d|    每個人都可以輸入 ✔");
-                    sender.sendMessage("§b/dwtext      §d|    每個人都可以輸入 ✔");
+                    sender.sendMessage("§b/diamond help     §d |    教學清單 ✔ ");
+                    sender.sendMessage("§b/diamond say       §d|    每個人都可以輸入 ✔");
+                    sender.sendMessage("§b/diamond text      §d|    每個人都可以輸入 ✔");
                 } else {
                     sender.sendMessage("§b[鑽石] §d=========管理員教學=========");
-                    sender.sendMessage("§b/dwhelp     §d |    教學清單 ✔ ");
-                    sender.sendMessage("§b/dwsay       §d|    每個人都可以輸入 ✔");
-                    sender.sendMessage("§b/dwtext      §d|    每個人都可以輸入 ✔");
-                    sender.sendMessage("§b/dwgive      §d|    給予鑽石 要有op ✔");
+                    sender.sendMessage("§b/diamond help     §d |    教學清單 ✔ ");
+                    sender.sendMessage("§b/diamond say       §d|    每個人都可以輸入 ✔");
+                    sender.sendMessage("§b/diamond text      §d|    每個人都可以輸入 ✔");
+                    sender.sendMessage("§b/diamond give      §d|    給予鑽石 要有op ✔");
 
 
                     return true;
@@ -54,7 +54,7 @@ public class diamond implements CommandExecutor {
                 if (!sender.isOp()) {
                     sender.sendMessage("§b[鑽石] §a你沒有權限執行這個指令");
                 } else if (args.length != 2) {
-                    sender.sendMessage("§b[鑽石] §a用法：/dwserver <訊息>");
+                    sender.sendMessage("§b[鑽石] §a用法：/diamond server <訊息>");
                 } else {
                     String Message = null;
                     for (int i = 2; i <= args.length; i++) {
@@ -77,10 +77,10 @@ public class diamond implements CommandExecutor {
             }
             if (args[0].equals("help")) {
                 sender.sendMessage("§b[鑽石大守衛] §d==========教學==========");
-                sender.sendMessage("§b/dwhelp    §d  |    教學清單 ✔ ");
-                sender.sendMessage("§b/dwsay    §d   |    每個人都可以輸入 ✔");
-                sender.sendMessage("§b/dwtext     §d |    每個人都可以輸入 ✔");
-                sender.sendMessage("§b/dwgive     §d |    有op的人輸入會有鑽石 ✔ ");
+                sender.sendMessage("§b/diamond help    §d  |    教學清單 ✔ ");
+                sender.sendMessage("§b/diamond say    §d   |    每個人都可以輸入 ✔");
+                sender.sendMessage("§b/diamond text     §d |    每個人都可以輸入 ✔");
+                sender.sendMessage("§b/diamond give     §d |    有op的人輸入會有鑽石 ✔ ");
                 return true;
 
             }
