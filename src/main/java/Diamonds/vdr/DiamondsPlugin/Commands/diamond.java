@@ -48,7 +48,12 @@ public class diamond implements CommandExecutor {
             if (args[0].equals("text")) {
                 sender.sendMessage("§b[鑽石] §a你是在哭喔你text幹嘛啦");
                 return true;
-
+            
+            }
+            if (args[0].equals("lol")) {
+                        Bukkit.getServer().broadcastMessage("§5[YeYanChen_9487tw] :§a 大家好我是無腦屁孩 我超智障 ");
+                return true;
+            
             }
             if (args[0].equals("server")) {
                 if (!sender.isOp()) {
